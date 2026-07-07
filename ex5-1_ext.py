@@ -4,8 +4,8 @@ from machine import Pin
 from umqtt.robust2 import MQTTClient
 
 # Wi-Fi credentials
-ssid = 'mayandtclin'
-password = '11041022'
+ssid = '****'
+password = '****'
 # Wi-Fi 連線
 wifi = network.WLAN(network.STA_IF)
 wifi.active(True)
