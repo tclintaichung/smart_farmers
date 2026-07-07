@@ -38,7 +38,7 @@ def publish_temperature(client):
         temp = sensor.temperature()
         humi = sensor.humidity()
         payload = f'temp={temp}/humi={humi}'
-        client.publish('temp_humi', payload)
+        client.publish('smart_farmer00/temp_humi', payload)
         print('Published: {}'.format(payload))
     except OSError as e:
         print('Failed to read sensor.')

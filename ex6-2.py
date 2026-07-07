@@ -5,13 +5,14 @@ from machine import Pin
 led = Pin(8, Pin.OUT)
 
 # UUIDs for Nordic UART Service (NUS)
-NUS_SERVICE_UUID = ubluetooth.UUID(0x2908)
-RX_CHAR_UUID     = ubluetooth.UUID(0x2909)
-TX_CHAR_UUID     = ubluetooth.UUID(0x290A)
+NUS_SERVICE_UUID = ubluetooth.UUID(0x1800)
+RX_CHAR_UUID     = ubluetooth.UUID(0x2A01)
+TX_CHAR_UUID     = ubluetooth.UUID(0x2A02)
 
 # BLE setup
 ble = ubluetooth.BLE()
 ble.active(True)
+print('MAC: ' + str(ble.config('mac')))
 
 # Define RX characteristic (write) and TX characteristic (notify)
 rx_char = (RX_CHAR_UUID, ubluetooth.FLAG_WRITE)
@@ -40,8 +41,8 @@ ble.irq(bt_irq)
 # Advertise
 adv_data = bytes([
     0x02, 0x01, 0x06,  # Flags
-    0x0A, 0x09, 
-]) + b"ESP32_NUS"
+    0x07, 0x09, 
+]) + b"ESP_00"
 
 ble.gap_advertise(100, adv_data)
 

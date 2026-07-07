@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background-image: url('https://www.gpsmycity.com/img/gd_sight/2870.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.intro {
+  margin-top: 100px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

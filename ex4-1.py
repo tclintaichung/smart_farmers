@@ -9,3 +9,5 @@ while True:
     sleep(1.5)    # 延遲 500 毫秒
     led.value(0)  # 關閉 LED
     sleep(1.5)    # 延遲 500 毫秒
+
+

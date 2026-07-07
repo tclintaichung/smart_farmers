@@ -28,7 +28,7 @@ def sub_cb(topic, msg, retained, duplicate):
 client = MQTTClient("esp32_client", "192.168.0.121", user="", password="")
 client.set_callback(sub_cb)
 client.connect()
-client.subscribe(b"#")
+client.subscribe('smart_farmer00/fan')
 
 print("等待 MQTT 訊息...")
 while True:

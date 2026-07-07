@@ -40,8 +40,8 @@ ble.irq(bt_irq)
 # Advertise
 adv_data = bytes([
     0x02, 0x01, 0x06,  # Flags
-    0x0A, 0x09, 
-]) + b"ESP32_NUS"
+    0x07, 0x09, 
+]) + b"ESP_00"
 
 ble.gap_advertise(100, adv_data)
 
