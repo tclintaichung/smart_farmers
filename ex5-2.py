@@ -5,8 +5,8 @@ import dht
 from umqtt.robust2 import MQTTClient
 
 # Wi-Fi credentials
-ssid = 'mayandtclin'
-password = '11041022'
+ssid = '****'
+password = '****'
 
 #mqtt_server = 'broker.hivemq.com'
 mqtt_server = '192.168.0.121'
