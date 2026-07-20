@@ -33,11 +33,6 @@ def bt_irq(event, data):
         conn_handle = None
         print("Central disconnected")
         ble.gap_advertise(100, adv_data)
-    elif event == 3:  # _IRQ_GATTS_WRITE
-        ch, attr = data
-        if attr == rx_handle:
-            value = ble.gatts_read(rx_handle)
-            print("RX:", value)
 
 ble.irq(bt_irq)
 

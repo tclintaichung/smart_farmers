@@ -25,7 +25,8 @@ def sub_cb(topic, msg, retained, duplicate):
         led.value(0)
 
 # 連線到 Broker
-client = MQTTClient("esp32_client", "broker.hivemq.com", user="", password="")
+client = MQTTClient("esp32_client", "broker.hivemq.com")
+
 client.set_callback(sub_cb)
 client.connect()
 client.subscribe("smart_farmer00/fan")

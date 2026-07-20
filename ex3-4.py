@@ -1,11 +1,19 @@
-import time
+# 建立字典
+student = {
+    "id": "S001",
+    "name": "Alice",
+    "age": 14,
+    "grade": "8th"
+}
 
-for i in range(10):   # 執行 10 次
-    # 取得目前時間
-    t = time.localtime()
-    
-    # 格式化輸出
-    print(time.strftime("%Y-%m-%d %H:%M:%S", t))
-    
-    # 暫停 1 秒
-    time.sleep(1)
+# 取值
+print(student["name"])   # 輸出: Alice
+
+# 新增或修改
+student["age"] = 15
+student["address"] = "Taichung"
+
+# 刪除
+del student["grade"]
+
+print(student)

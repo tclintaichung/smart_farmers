@@ -8,8 +8,7 @@ from umqtt.robust2 import MQTTClient
 ssid = '****'
 password = '****'
 
-#mqtt_server = 'broker.hivemq.com'
-mqtt_server = '192.168.0.121'
+mqtt_server = 'broker.hivemq.com'
 mqtt_client_id = 'esp32-s3'
 
 # DHT sensor initialization
